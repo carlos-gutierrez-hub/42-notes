@@ -1,0 +1,59 @@
+====================================================================
+42 MODULE 0 SUMMARY: SHELL, PERMISSIONS, GIT & SSH
+====================================================================
+
+1. TERMINAL, SHELL & BASH
+- Terminal: The visual window where we type commands.
+- Shell: The command-line interpreter that translates human commands
+  into actions for the operating system.
+- Bash: The specific shell program running on Linux.
+- Exit terminal: Type 'exit' or press Ctrl + D.
+- Help manual: Add '--help' after a command (e.g., pwd --help).
+
+2. KEY NAVIGATION SYMBOLS
+- /   : Root directory (top of the file system) or path separator.
+- ~   : Home directory shortcut (/home/cargutie).
+- .   : Current working directory ("right here").
+- ..  : Parent directory ("one folder up/back").
+- -   : Previous directory when used with cd (cd -), or command flag.
+- >   : Redirects output into a file (e.g., echo "Z" > z).
+- &&  : Runs the second command only if the first one succeeds.
+
+3. ESSENTIAL UNIX COMMANDS
+- pwd   : Print Working Directory (shows current path).
+- ls    : List files and folders (ls -l for details, ls -la for hidden).
+- cd    : Change Directory (cd /, cd ~, cd .., cd folder_name).
+- mkdir : Make Directory (create a new folder).
+- rmdir : Remove empty directory.
+- mv    : Move or rename a file/folder (mv old_name new_name).
+- cp    : Copy a file/folder.
+- cat   : Display file contents (cat -e shows $ at end of lines).
+- echo  : Print text or expand variables/paths onto the screen.
+- nano  : Terminal text editor (Ctrl+O to save, Ctrl+X to exit).
+
+4. FILE PERMISSIONS (ls -l -> e.g., -rw-r--r-- / drwxr-xr-x)
+- 1st char : File type ('-' = regular file, 'd' = directory).
+- Next 3   : Owner permissions (User).
+- Next 3   : Group permissions.
+- Last 3   : Others permissions (everyone else).
+- Letters  : r = Read, w = Write, x = Execute, - = Denied.
+
+5. GIT WORKFLOW (VERSION CONTROL)
+- Working Directory : Local folder where files are created/edited.
+- Staging Area      : Preparation zone before saving a snapshot.
+- git init -b main  : Initialize a new local Git repository.
+- git status        : Check untracked, staged, or modified files.
+- git add <file>    : Put file into the staging area.
+- git commit -m ""  : Save a permanent snapshot (commit) locally.
+- git push          : Upload local commits to GitHub (origin).
+- git pull          : Download updates from GitHub to local machine.
+- git log --oneline : View history of commits.
+- git mv            : Rename/move a file tracked by Git.
+
+6. SSH KEYS (SECURE AUTHENTICATION)
+- One SSH key pair in ~/.ssh/ links this terminal to GitHub for ALL
+  repositories (no passwords required).
+- id_ed25519     : Private key (SECRET - never share or upload).
+- id_ed25519.pub : Public key (safe to share and add to GitHub).
+- Test connection: ssh -T git@github.com
+====================================================================
